@@ -17,7 +17,7 @@ public class CategoryController {
 		return this.categoryService.getById(categoryId);
 	}
 
-	public List<Category> list() {
+	public Category[] list() {
 		return this.categoryService.getList();
 	}
 

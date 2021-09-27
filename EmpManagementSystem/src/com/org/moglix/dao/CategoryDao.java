@@ -1,7 +1,5 @@
 package com.org.moglix.dao;
 
-import java.util.List;
-
 import com.org.moglix.domain.Category;
 
 public interface CategoryDao {
@@ -9,7 +7,7 @@ public interface CategoryDao {
 
 	public Category getById(Long categyId);
 
-	public List<Category> getList();
+	public Category[] getList();
 
 	public String deleteById(Long categoryId);
 }

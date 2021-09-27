@@ -21,7 +21,7 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public List<Cart> getList() {
+	public Cart[] getList() {
 		return this.cartDao.getList();
 	}
 

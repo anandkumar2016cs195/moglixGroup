@@ -9,7 +9,7 @@ public interface OrderService {
 
 	public Orders getById(Long orderId);
 
-	public List<Orders> getList();
+	public Orders[] getList();
 
 	public String deleteById(Long orderId);
 }

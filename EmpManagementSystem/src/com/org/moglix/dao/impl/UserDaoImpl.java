@@ -38,9 +38,8 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<User> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public User[] getList() {
+		return users;
 	}
 
 	@Override

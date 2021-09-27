@@ -20,7 +20,7 @@ InventoryDao inventoryDao=new InventoryDaoImpl();
 	}
 
 	@Override
-	public List<Inventory> getList() {
+	public Inventory[] getList() {
 		return inventoryDao.getList();
 	}
 

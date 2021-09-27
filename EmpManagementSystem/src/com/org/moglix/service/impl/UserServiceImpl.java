@@ -1,34 +1,30 @@
 package com.org.moglix.service.impl;
 
-import java.util.List;
-
+import com.org.moglix.dao.UserDao;
+import com.org.moglix.dao.impl.UserDaoImpl;
 import com.org.moglix.domain.User;
 import com.org.moglix.service.UserService;
 
 public class UserServiceImpl implements UserService {
-
+UserDao userDao=new UserDaoImpl();
 	@Override
-	public User saveOrUpdate(User user) {
-		// TODO Auto-generated method stub
-		return null;
+	public String saveOrUpdate(User user) {
+		return userDao.saveOrUpdate(user);
 	}
 
 	@Override
 	public User getById(Long userId) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.getById(userId);
 	}
 
 	@Override
-	public List<User> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public User[] getList() {
+		return userDao.getList();
 	}
 
 	@Override
-	public void deleteById(Long userId) {
-		// TODO Auto-generated method stub
-		
+	public String deleteById(Long userId) {
+		return userDao.deleteById(userId);		
 	}
 
 }

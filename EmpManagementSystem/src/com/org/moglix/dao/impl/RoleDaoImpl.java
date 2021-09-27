@@ -38,9 +38,8 @@ public class RoleDaoImpl implements RoleDao {
 	}
 
 	@Override
-	public List<Role> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public Role[] getList() {
+		return roles;
 	}
 
 	@Override

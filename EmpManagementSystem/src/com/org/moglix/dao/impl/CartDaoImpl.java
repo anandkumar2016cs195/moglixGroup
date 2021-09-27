@@ -1,7 +1,5 @@
 package com.org.moglix.dao.impl;
 
-import java.util.List;
-
 import com.org.moglix.dao.CartDao;
 import com.org.moglix.domain.Cart;
 
@@ -41,9 +39,8 @@ public class CartDaoImpl implements CartDao {
 	}
 
 	@Override
-	public List<Cart> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public Cart[] getList() {
+		return carts;
 	}
 
 	@Override

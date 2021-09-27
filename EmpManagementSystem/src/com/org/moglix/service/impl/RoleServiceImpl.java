@@ -20,7 +20,7 @@ RoleDao roleDao=new RoleDaoImpl();
 	}
 
 	@Override
-	public List<Role> getList() {
+	public Role[] getList() {
 		return roleDao.getList();
 	}
 

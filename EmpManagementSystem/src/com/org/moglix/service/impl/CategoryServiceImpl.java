@@ -20,7 +20,7 @@ CategoryDao categoryDao=new CategoryDaoImpl();
 	}
 
 	@Override
-	public List<Category> getList() {
+	public Category[] getList() {
 		return categoryDao.getList();
 	}
 

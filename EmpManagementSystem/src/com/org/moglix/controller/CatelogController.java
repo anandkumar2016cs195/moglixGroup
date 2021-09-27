@@ -17,7 +17,7 @@ public class CatelogController {
 		return this.catalogService.getById(catalogId);
 	}
 
-	public List<Catalog> list() {
+	public Catalog[] list() {
 		return this.catalogService.getList();
 	}
 

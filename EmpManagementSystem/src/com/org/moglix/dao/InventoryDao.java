@@ -1,7 +1,5 @@
 package com.org.moglix.dao;
 
-import java.util.List;
-
 import com.org.moglix.domain.Inventory;
 
 public interface InventoryDao {
@@ -9,7 +7,7 @@ public interface InventoryDao {
 
 	public Inventory getById(Long inventoryId);
 
-	public List<Inventory> getList();
+	public Inventory[] getList();
 
 	public String deleteById(Long inventoryId);
 }

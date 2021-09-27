@@ -9,7 +9,7 @@ import com.org.moglix.service.impl.UserServiceImpl;
 public class UserController {
 	UserService userService = new UserServiceImpl();
 
-	public User saveOrUpdate(User user) {
+	public String saveOrUpdate(User user) {
 		return this.userService.saveOrUpdate(user);
 	}
 
@@ -17,7 +17,7 @@ public class UserController {
 		return this.userService.getById(userId);
 	}
 
-	public List<User> list() {
+	public User[] list() {
 		return this.userService.getList();
 	}
 

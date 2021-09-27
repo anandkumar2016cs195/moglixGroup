@@ -16,7 +16,7 @@ public class OrderController {
 		return this.orderService.getById(orderId);
 	}
 
-	public List<Orders> list() {
+	public Orders[] list() {
 		return this.orderService.getList();
 	}
 

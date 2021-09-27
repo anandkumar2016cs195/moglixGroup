@@ -1,7 +1,5 @@
 package com.org.moglix.dao.impl;
 
-import java.util.List;
-
 import com.org.moglix.dao.InventoryDao;
 import com.org.moglix.domain.Inventory;
 
@@ -40,9 +38,8 @@ public class InventoryDaoImpl implements InventoryDao {
 	}
 
 	@Override
-	public List<Inventory> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public Inventory[] getList() {
+		return inventories;
 	}
 
 	@Override

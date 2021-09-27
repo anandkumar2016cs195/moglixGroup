@@ -36,9 +36,8 @@ Category categories[]=new Category[16];
 	}
 
 	@Override
-	public List<Category> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public Category[] getList() {
+		return categories;
 	}
 
 	@Override

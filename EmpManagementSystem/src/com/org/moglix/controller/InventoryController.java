@@ -1,7 +1,5 @@
 package com.org.moglix.controller;
 
-import java.util.List;
-
 import com.org.moglix.domain.Inventory;
 import com.org.moglix.service.InventoryService;
 import com.org.moglix.service.impl.InventoryServiceImpl;
@@ -17,7 +15,7 @@ public class InventoryController {
 		return this.inventroryService.getById(inventoryId);
 	}
 
-	public List<Inventory> list() {
+	public Inventory[] list() {
 		return this.inventroryService.getList();
 	}
 

@@ -47,8 +47,8 @@ public class CatalogDaoImpl implements CatalogDao {
 	}
 
 	@Override
-	public List<Catalog> getList() {
-		return null;
+	public Catalog[] getList() {
+		return catalogs;
 	}
 
 	@Override

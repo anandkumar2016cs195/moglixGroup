@@ -41,9 +41,8 @@ Orders orders[]=new Orders[10];
 	}
 
 	@Override
-	public List<Orders> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public Orders[] getList() {
+		return orders;
 	}
 
 	@Override

@@ -9,7 +9,7 @@ public interface CatalogService {
 
 	public Catalog getById(Long catelogId);
 
-	public List<Catalog> getList();
+	public Catalog[] getList();
 
 	public String deleteById(Long catelogId);
 }

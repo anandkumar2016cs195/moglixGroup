@@ -20,7 +20,7 @@ CatalogDao catalogService=new CatalogDaoImpl();
 	}
 
 	@Override
-	public List<Catalog> getList() {
+	public Catalog[] getList() {
 		return catalogService.getList();
 	}
 

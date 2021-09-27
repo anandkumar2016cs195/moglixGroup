@@ -1,7 +1,5 @@
 package com.org.moglix.controller;
 
-import java.util.List;
-
 import com.org.moglix.domain.Cart;
 import com.org.moglix.service.CartService;
 import com.org.moglix.service.impl.CartServiceImpl;
@@ -17,7 +15,7 @@ public class CartController {
 		return this.cartSevice.getById(cartId);
 	}
 
-	public List<Cart> list() {
+	public Cart[] list() {
 		return this.cartSevice.getList();
 	}
 

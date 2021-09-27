@@ -20,7 +20,7 @@ public class OrderServiceImpl implements com.org.moglix.service.OrderService {
 	}
 
 	@Override
-	public List<Orders> getList() {
+	public Orders[] getList() {
 		return orderDao.getList();
 	}
 
