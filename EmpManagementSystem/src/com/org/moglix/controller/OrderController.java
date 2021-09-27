@@ -8,7 +8,7 @@ import com.org.moglix.service.impl.OrderServiceImpl;
 public class OrderController {
 	OrderServiceImpl orderService = new OrderServiceImpl();
 
-	public Orders saveOrUpdate(Orders order) {
+	public String saveOrUpdate(Orders order) {
 		return this.orderService.saveOrUpdate(order);
 	}
 
@@ -20,7 +20,7 @@ public class OrderController {
 		return this.orderService.getList();
 	}
 
-	public void delete(Long orderId) {
-		this.orderService.deleteById(orderId);
+	public String delete(Long orderId) {
+		return this.orderService.deleteById(orderId);
 	}
 }

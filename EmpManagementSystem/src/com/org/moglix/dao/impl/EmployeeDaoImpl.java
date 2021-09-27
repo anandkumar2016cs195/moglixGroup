@@ -48,11 +48,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		this.counter=0;
 		for(Employee emp:employees) {
 			if(emp!=null && emp.getEmp_id().equalsIgnoreCase(empId)) {
-				
-				System.out.println(counter);
-	this.removeTheEmployee(employees, counter);
-	counter++;
-
+				this.employees[counter]=null;
 				return "Deleted SuccessFully";
 			}else {
 				counter++;
@@ -62,24 +58,26 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		return "Deleted successFully  ..!";
 	}
 
-	public static Employee[] removeTheEmployee(Employee[] arr, int index) {
-
-
-		if (arr == null || index < 0 || index >= arr.length) {
-			return arr;
-		}
-		Employee[] employeeUpdated = new Employee[arr.length - 1];
-
-		for (int i = 0, k = 0; i < arr.length; i++) {
-
-
-			if (i == index) {
-				continue;
-			}
-
-			employeeUpdated[k++] = arr[i];
-		}
-
-		return employeeUpdated;
-	}
+//	public static Employee[] removeTheEmployee(Employee[] arr, int index) {
+//
+//
+////		if (arr == null || index < 0 || index >= arr.length) {
+////			System.out.println("helllo");
+////			return arr;
+////		}
+//		Employee[] employeeUpdated = new Employee[arr.length - 1];
+//
+//		for (int i = 0, k = 0; i < arr.length; i++) {
+//
+//
+//			if (i == index) {
+//				System.out.println("i = "+i +" ==" +"j :"+index);
+//				continue;
+//			}
+//
+//			employeeUpdated[k] = arr[i++];
+//		}
+//        System.out.println(employeeUpdated.length);
+//		return employeeUpdated;
+//	}
 }

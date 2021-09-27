@@ -9,7 +9,7 @@ import com.org.moglix.service.impl.CatalogServiceImpl;
 public class CatelogController {
 	CatalogService catalogService = new CatalogServiceImpl();
 
-	public Catalog saveOrUpdate(Catalog catalog) {
+	public String saveOrUpdate(Catalog catalog) {
 		return this.catalogService.saveOrUpdate(catalog);
 	}
 
@@ -21,8 +21,8 @@ public class CatelogController {
 		return this.catalogService.getList();
 	}
 
-	public void delete(Long catalogId) {
-		this.catalogService.deleteById(catalogId);
+	public String delete(Long catalogId) {
+		return this.catalogService.deleteById(catalogId);
 
 	}
 }

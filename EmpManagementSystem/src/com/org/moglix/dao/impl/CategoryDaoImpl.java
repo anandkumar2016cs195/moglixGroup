@@ -6,16 +6,32 @@ import com.org.moglix.dao.CategoryDao;
 import com.org.moglix.domain.Category;
 
 public class CategoryDaoImpl implements CategoryDao {
-
+private static int counter=0;
+Category categories[]=new Category[16];
 	@Override
-	public Category saveOrUpdate(Category category) {
-		// TODO Auto-generated method stub
-		return null;
+	public String saveOrUpdate(Category category) {
+		if(this.getById(category.getCategoryId())!=null) {
+			for (Category cat : categories) {
+				if(cat.getCategoryId() ==category.getCategoryId()) {
+					cat.setCategoryName(category.getCategoryName());
+					return "Updated Successfully ";
+				}
+			}
+		}else {
+			if(counter<categories.length) {
+				categories[counter]=category;
+			}
+		}
+		return "Inserted Successfully";
 	}
 
 	@Override
 	public Category getById(Long categyId) {
-		// TODO Auto-generated method stub
+		for (Category category : categories) {
+			if(category!=null && category.getCategoryId()==categyId) {
+				return category;
+			}
+		}
 		return null;
 	}
 
@@ -26,9 +42,17 @@ public class CategoryDaoImpl implements CategoryDao {
 	}
 
 	@Override
-	public void deleteById(Long categoryId) {
-		// TODO Auto-generated method stub
-
+	public String deleteById(Long categoryId) {
+		this.counter=0;
+		for (Category category : categories) {
+		if(category!=null && category.getCategoryId()==categoryId) {
+			categories[counter]=null;
+			return "Deleted Successfull with categoryId "+categoryId+"";
+		}else {
+			counter++;
+		}
+	}
+	       return "Internal Server error OR catalogId may not exist";
 	}
 
 }

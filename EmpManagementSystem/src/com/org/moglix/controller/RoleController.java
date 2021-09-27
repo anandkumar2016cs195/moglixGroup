@@ -9,7 +9,7 @@ import com.org.moglix.service.impl.RoleServiceImpl;
 public class RoleController {
 	RoleService roleService = new RoleServiceImpl();
 
-	public Role saveOrUpdate(Role role) {
+	public String saveOrUpdate(Role role) {
 		return this.roleService.saveOrUpdate(role);
 	}
 
@@ -19,7 +19,7 @@ public class RoleController {
 	public List<Role> list(){
 		return this.roleService.getList();
 	}
-	public void delete (Long roleId) {
-		this.roleService.deleteById(roleId);
+	public String delete (Long roleId) {
+		return this.roleService.deleteById(roleId);
 	}
 }

@@ -9,7 +9,7 @@ import com.org.moglix.service.impl.CategoryServiceImpl;
 public class CategoryController {
 	CategoryService categoryService = new CategoryServiceImpl();
 
-	public Category saveOrUpdate(Category category) {
+	public String saveOrUpdate(Category category) {
 		return this.categoryService.saveOrUpdate(category);
 	}
 
@@ -21,7 +21,7 @@ public class CategoryController {
 		return this.categoryService.getList();
 	}
 
-	public void delete(Long categoryId) {
-		this.categoryService.deleteById(categoryId);
+	public String delete(Long categoryId) {
+	return	this.categoryService.deleteById(categoryId);
 	}
 }

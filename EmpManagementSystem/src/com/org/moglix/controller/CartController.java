@@ -9,7 +9,7 @@ import com.org.moglix.service.impl.CartServiceImpl;
 public class CartController {
 	CartService cartSevice = new CartServiceImpl();
 
-	public Cart saveOrUpdate(Cart cart) {
+	public String saveOrUpdate(Cart cart) {
 		return this.cartSevice.saveOrUpdate(cart);
 	}
 
@@ -21,7 +21,7 @@ public class CartController {
 		return this.cartSevice.getList();
 	}
 
-	public void delete(Long cartId) {
-		this.cartSevice.deleteById(cartId);
+	public String delete(Long cartId) {
+		return this.cartSevice.deleteById(cartId);
 	}
 }

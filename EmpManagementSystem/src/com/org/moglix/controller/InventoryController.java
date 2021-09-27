@@ -9,7 +9,7 @@ import com.org.moglix.service.impl.InventoryServiceImpl;
 public class InventoryController {
 	InventoryService inventroryService = new InventoryServiceImpl();
 
-	public Inventory saveOrUpdate(Inventory inventrory) {
+	public String saveOrUpdate(Inventory inventrory) {
 		return this.inventroryService.saveOrUpdate(inventrory);
 	}
 
@@ -21,7 +21,7 @@ public class InventoryController {
 		return this.inventroryService.getList();
 	}
 
-	public void delete(Long inventoryId) {
-		this.inventroryService.deleteById(inventoryId);
+	public String delete(Long inventoryId) {
+		return this.inventroryService.deleteById(inventoryId);
 	}
 }

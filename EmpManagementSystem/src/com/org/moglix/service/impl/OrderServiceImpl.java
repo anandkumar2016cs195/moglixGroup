@@ -7,9 +7,10 @@ import com.org.moglix.dao.impl.OrderDaoImpl;
 import com.org.moglix.domain.Orders;
 
 public class OrderServiceImpl implements com.org.moglix.service.OrderService {
-OrderDao orderDao =new OrderDaoImpl();
+	OrderDao orderDao = new OrderDaoImpl();
+
 	@Override
-	public Orders saveOrUpdate(Orders order) {
+	public String saveOrUpdate(Orders order) {
 		return orderDao.saveOrUpdate(order);
 	}
 
@@ -24,8 +25,8 @@ OrderDao orderDao =new OrderDaoImpl();
 	}
 
 	@Override
-	public void deleteById(Long orderId) {
-		orderDao.deleteById(orderId);
+	public String deleteById(Long orderId) {
+		return orderDao.deleteById(orderId);
 	}
 
 }

@@ -10,7 +10,7 @@ import com.org.moglix.service.CategoryService;
 public class CategoryServiceImpl implements CategoryService {
 CategoryDao categoryDao=new CategoryDaoImpl();
 	@Override
-	public Category saveOrUpdate(Category category) {
+	public String saveOrUpdate(Category category) {
 		return categoryDao.saveOrUpdate(category);
 	}
 
@@ -25,8 +25,8 @@ CategoryDao categoryDao=new CategoryDaoImpl();
 	}
 
 	@Override
-	public void deleteById(Long categoryId) {
-		categoryDao.deleteById(categoryId);		
+	public String deleteById(Long categoryId) {
+		return categoryDao.deleteById(categoryId);		
 	}
 
 }

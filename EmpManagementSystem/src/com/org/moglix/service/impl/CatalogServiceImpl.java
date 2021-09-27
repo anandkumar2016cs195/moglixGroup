@@ -10,7 +10,7 @@ import com.org.moglix.service.CatalogService;
 public class CatalogServiceImpl implements CatalogService{
 CatalogDao catalogService=new CatalogDaoImpl();
 	@Override
-	public Catalog saveOrUpdate(Catalog catelog) {
+	public String saveOrUpdate(Catalog catelog) {
 		return catalogService.saveOrUpdate(catelog);
 	}
 
@@ -25,8 +25,8 @@ CatalogDao catalogService=new CatalogDaoImpl();
 	}
 
 	@Override
-	public void deleteById(Long catelogId) {
-		catalogService.deleteById(catelogId);		
+	public String  deleteById(Long catelogId) {
+	return 	catalogService.deleteById(catelogId);		
 	}
 
 }

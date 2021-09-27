@@ -10,7 +10,7 @@ import com.org.moglix.service.RoleService;
 public class RoleServiceImpl implements RoleService {
 RoleDao roleDao=new RoleDaoImpl();
 	@Override
-	public Role saveOrUpdate(Role Role) {
+	public String saveOrUpdate(Role Role) {
 		return roleDao.saveOrUpdate(Role);
 	}
 
@@ -25,8 +25,8 @@ RoleDao roleDao=new RoleDaoImpl();
 	}
 
 	@Override
-	public void deleteById(Long roleId) {
-		roleDao.deleteById(roleId);
+	public String deleteById(Long roleId) {
+		return roleDao.deleteById(roleId);
 	}
 
 }

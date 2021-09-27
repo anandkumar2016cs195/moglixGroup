@@ -5,11 +5,11 @@ import java.util.List;
 import com.org.moglix.domain.Inventory;
 
 public interface InventoryDao {
-	public Inventory saveOrUpdate(Inventory inventory);
+	public String saveOrUpdate(Inventory inventory);
 
 	public Inventory getById(Long inventoryId);
 
 	public List<Inventory> getList();
 
-	public void deleteById(Long inventoryId);
+	public String deleteById(Long inventoryId);
 }

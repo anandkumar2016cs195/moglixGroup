@@ -10,7 +10,7 @@ import com.org.moglix.service.InventoryService;
 public class InventoryServiceImpl implements InventoryService {
 InventoryDao inventoryDao=new InventoryDaoImpl();
 	@Override
-	public Inventory saveOrUpdate(Inventory inventory) {
+	public String saveOrUpdate(Inventory inventory) {
 		return inventoryDao.saveOrUpdate(inventory);
 	}
 
@@ -25,8 +25,8 @@ InventoryDao inventoryDao=new InventoryDaoImpl();
 	}
 
 	@Override
-	public void deleteById(Long inventoryId) {
-		inventoryDao.deleteById(inventoryId);
+	public String deleteById(Long inventoryId) {
+	return	inventoryDao.deleteById(inventoryId);
 	}
 
 }

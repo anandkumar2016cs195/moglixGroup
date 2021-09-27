@@ -5,11 +5,11 @@ import java.util.List;
 import com.org.moglix.domain.Cart;
 
 public interface CartDao {
-	public Cart saveOrUpdate(Cart cart);
+	public String saveOrUpdate(Cart cart);
 
 	public Cart getById(Long cartId);
 
 	public List<Cart> getList();
 
-	public void deleteById(Long cartId);
+	public String deleteById(Long cartId);
 }

@@ -11,7 +11,7 @@ public class CartServiceImpl implements CartService {
 	CartDao cartDao = new CartDaoImpl();
 
 	@Override
-	public Cart saveOrUpdate(Cart cart) {
+	public String saveOrUpdate(Cart cart) {
 		return cartDao.saveOrUpdate(cart);
 	}
 
@@ -26,8 +26,8 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public void deleteById(Long cartId) {
-		this.cartDao.deleteById(cartId);
+	public String deleteById(Long cartId) {
+		return this.cartDao.deleteById(cartId);
 	}
 
 }
