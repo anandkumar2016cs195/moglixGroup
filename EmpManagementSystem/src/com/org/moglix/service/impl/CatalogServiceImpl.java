@@ -2,33 +2,31 @@ package com.org.moglix.service.impl;
 
 import java.util.List;
 
-import com.org.moglix.domain.Catelog;
+import com.org.moglix.dao.CatalogDao;
+import com.org.moglix.dao.impl.CatalogDaoImpl;
+import com.org.moglix.domain.Catalog;
 import com.org.moglix.service.CatalogService;
 
 public class CatalogServiceImpl implements CatalogService{
-
+CatalogDao catalogService=new CatalogDaoImpl();
 	@Override
-	public Catelog saveOrUpdate(Catelog catelog) {
-		// TODO Auto-generated method stub
-		return null;
+	public Catalog saveOrUpdate(Catalog catelog) {
+		return catalogService.saveOrUpdate(catelog);
 	}
 
 	@Override
-	public Catelog getById(Long catelogId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Catalog getById(Long catelogId) {
+		return catalogService.getById(catelogId);
 	}
 
 	@Override
-	public List<Catelog> getList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Catalog> getList() {
+		return catalogService.getList();
 	}
 
 	@Override
 	public void deleteById(Long catelogId) {
-		// TODO Auto-generated method stub
-		
+		catalogService.deleteById(catelogId);		
 	}
 
 }

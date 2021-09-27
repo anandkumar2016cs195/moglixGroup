@@ -1,7 +1,34 @@
 package com.org.moglix.service.impl;
 
+import java.util.List;
+
+import com.org.moglix.domain.User;
 import com.org.moglix.service.UserService;
 
 public class UserServiceImpl implements UserService {
+
+	@Override
+	public User saveOrUpdate(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getById(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(Long userId) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

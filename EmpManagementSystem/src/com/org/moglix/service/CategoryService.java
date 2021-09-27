@@ -2,14 +2,14 @@ package com.org.moglix.service;
 
 import java.util.List;
 
-import com.org.moglix.domain.Catelog;
+import com.org.moglix.domain.Category;
 
 public interface CategoryService {
-	public Catelog saveOrUpdate(Catelog catelog);
+	public Category saveOrUpdate(Category category);
 
-	public Catelog getById(Long catelogId);
+	public Category getById(Long categoryId);
 
-	public List<Catelog> getList();
+	public List<Category> getList();
 
-	public void deleteById(Long catelogId);
+	public void deleteById(Long categoryId);
 }

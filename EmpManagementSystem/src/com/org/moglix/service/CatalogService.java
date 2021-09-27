@@ -2,14 +2,14 @@ package com.org.moglix.service;
 
 import java.util.List;
 
-import com.org.moglix.domain.Catelog;
+import com.org.moglix.domain.Catalog;
 
 public interface CatalogService {
-	public Catelog saveOrUpdate(Catelog catelog);
+	public Catalog saveOrUpdate(Catalog catelog);
 
-	public Catelog getById(Long catelogId);
+	public Catalog getById(Long catelogId);
 
-	public List<Catelog> getList();
+	public List<Catalog> getList();
 
 	public void deleteById(Long catelogId);
 }

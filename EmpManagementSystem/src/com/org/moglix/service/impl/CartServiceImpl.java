@@ -2,33 +2,32 @@ package com.org.moglix.service.impl;
 
 import java.util.List;
 
+import com.org.moglix.dao.CartDao;
+import com.org.moglix.dao.impl.CartDaoImpl;
 import com.org.moglix.domain.Cart;
 import com.org.moglix.service.CartService;
 
 public class CartServiceImpl implements CartService {
+	CartDao cartDao = new CartDaoImpl();
 
 	@Override
 	public Cart saveOrUpdate(Cart cart) {
-		// TODO Auto-generated method stub
-		return null;
+		return cartDao.saveOrUpdate(cart);
 	}
 
 	@Override
 	public Cart getById(Long cartId) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.cartDao.getById(cartId);
 	}
 
 	@Override
 	public List<Cart> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.cartDao.getList();
 	}
 
 	@Override
 	public void deleteById(Long cartId) {
-		// TODO Auto-generated method stub
-
+		this.cartDao.deleteById(cartId);
 	}
 
 }
